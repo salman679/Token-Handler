@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Counter</title>
+    <link rel="shortcut icon" href="aseets/image/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="aseets/css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="aseets/css/style.css">
+</head>
+
+<body>
+    <!-- nevber start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="w-25" href="#">
+                <img src="aseets/image/logo.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-capitalize">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- nevber end -->
+
+    <!-- banner start -->
+    <section>
+        <div class="banner">
+            <div class="container">
+                <div class="title">
+                    <h1>Please take a token first</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner end -->
+
+    <!-- token start -->
+    <section>
+        <div class="token">
+            <div class="container">
+                <h3 class="text-center token-status">Token Status</h3>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form">
+                            <form id="total-form">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="name"
+                                        name="nameInput" required>
+                                    <span class="mantatory">⛔Please inter your valid name</span>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="email"
+                                        name="emailInput" required>
+                                    <span class="mantatory">⛔Please inter your valid Email</span>
+                                </div>
+                                <select class="form-select select" name="statusSection" id="Status">
+                                    <option value="Active">Active</option>
+                                    <option value="Complete">Completed</option>
+                                    <option value="Cancel">cancel</option>
+                                </select>
+                                <button type="submit" id="add-token">Add Token</button>
+                            </form>
+                            <h3 class="total-token">Total Token: <span id="Total-Token">0</span></h3>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 token-package">
+                        <!-- active items -->
+                        <div class="active-items active">
+                            <div class="active-header">
+                                <h4>Active Token</h4>
+                                <span id="total-active">3</span>
+                            </div>
+                            <ul id="ul-active">
+                                <!-- keep this empty -->
+                            </ul>
+                        </div>
+
+                        <!-- complete items -->
+                        <div class="active-items completed">
+                            <div class="active-header">
+                                <h4>Completed Token</h4>
+                                <span id="total-complete">3</span>
+                            </div>
+                            <ul id="ul-complete">
+                                <!-- keep this empty -->
+                            </ul>
+                        </div>
+
+                        <!-- cancel items -->
+                        <div class="active-items cancel">
+                            <div class="active-header">
+                                <h4>cancel Token</h4>
+                                <span id="total-cancel">3</span>
+                            </div>
+                            <ul id="ul-cancel">
+                                <!-- keep this empty -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- token end -->
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- js section -->
+    <script src="aseets/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="aseets/js/custom.js"></script> -->
+    <script src="aseets/js/self.js"></script>
+    <!-- <script src="aseets/js/parctice2.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Open+Sans:wght@700&display=swap');
+
+:root {
+    --active_color: #00BD56;
+    --complete_color: #1C82AD;
+    --cancel_color: #DA1D4A;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* banner */
+.banner {
+    background-image: url(../image/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.banner::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.605);
+    z-index: -1;
+}
+
+.banner h1 {
+    font-family: Open Sans;
+    font-size: 56px;
+    font-weight: 700;
+    padding: 158px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+/* token */
+.token {
+    margin: 50px 0;
+}
+
+.token .token-status {
+    margin-bottom: 0;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    margin-bottom: 31px;
+}
+
+.token form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.token input {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.token form .mantatory {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    color: red;
+    margin-left: 3px;
+    text-transform: capitalize;
+    display: none;
+}
+
+/* .token input {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+} */
+
+.token input::placeholder,
+.token form .select {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.381);
+}
+
+.token form .select {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 30px;
+}
+
+.token form .select option {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 1);
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+
+.token form .select {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.token form button {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+    background-color: var(--active_color);
+    padding: 20px 68px;
+    border-radius: 5px;
+    border: none;
+}
+
+.token .total-token {
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    margin-top: 33px;
+    text-align: center;
+}
+
+/* right site */
+.token .active-items {
+    background-color: #fff;
+    margin-bottom: 30px;
+    /* padding-bottom: 1px; */
+}
+
+.token .active-items .active-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 5px 5px 0 0;
+}
+
+.token .active-items .active-header h4,
+.token .active-items .active-header span {
+    margin-bottom: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+/* .token .active-items .active-header span {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    color: #fff;
+} */
+
+.token .active-items ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    padding: 30px 24px 4px 24px;
+}
+
+.token .active-items .active-info {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.token .active-items .active-info p {
+    margin-bottom: 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.token .active-items .active-info .left span {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+}
+
+.token .active-items .active-info a {
+    padding: 15px 36px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #fff;
+    border-radius: 5px;
+    margin: -5px -10px -5px -10px;
+}
+
+.token .active-items.active .active-header {
+    background-color: var(--active_color);
+}
+
+.token .active-items.active p {
+    color: var(--active_color);
+}
+
+.token .active-items.active a {
+    background-color: var(--active_color);
+}
+
+.token .active-items.completed .active-header {
+    background-color: var(--complete_color);
+}
+
+.token .active-items.completed p {
+    color: var(--complete_color);
+}
+
+.token .active-items.completed a {
+    background-color: var(--complete_color);
+}
+
+.token .active-items.cancel .active-header {
+    background-color: var(--cancel_color);
+}
+
+.token .active-items.cancel p {
+    color: var(--cancel_color);
+}
+
+.token .active-items.cancel a {
+    background-color: var(--cancel_color);
+}
