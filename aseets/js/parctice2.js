@@ -14,12 +14,12 @@ btn.addEventListener('click', e => {
         activeItems[proparty] = value;
     })
 
-    if (updeteItems) {
+    if (updateItems) {
         TokenData = TokenData.map(item => {
-            if (item.id == updeteItems) {
+            if (item.id == updateItems) {
                 return {
                     ...activeItems,
-                    id: updeteItems
+                    id: updateItems
                 }
             } else {
                 return item;
@@ -38,7 +38,7 @@ btn.addEventListener('click', e => {
     tokenHandler()
     editHandler()
     document.getElementById('total-form').reset();
-    updeteItems = '';
+    updateItems = '';
 })
 
 // create li structure
@@ -118,7 +118,7 @@ function editHandler() {
                 }
             }
         }
-        updeteItems = dataid;
+        updateItems = dataid;
 
     })
 }

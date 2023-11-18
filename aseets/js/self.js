@@ -1,6 +1,7 @@
 let btn = document.getElementById('add-token');
 
 let TokenData = [];
+let updateItems = null;
 tokenHandler()
 editHandler()
 
@@ -10,39 +11,35 @@ btn.addEventListener('click', e => {
     let fullForm = new FormData(document.getElementById('total-form'));
     let activeItems = Object.fromEntries(fullForm)
 
-    // fullForm.forEach((value, property) => {
-    //     activeItems[property] = value;
-    // })
-
-    const validform = fullForm.nameInput !== '' && fullForm.emailInput !== '';
+    const validform = activeItems.nameInput !== '' && activeItems.emailInput !== '';
     document.querySelectorAll('.mantatory').forEach(item => {
         item.style.display = validform ? "none" : "block";
     })
 
     if (validform) {
-        TokenData.push({
-            ...activeItems,
-            id: TokenData.length + 1
-        })
+        if (!updateItems) {
+            TokenData.push({
+                ...activeItems,
+                id: TokenData.length + 1
+            })
+        } else {
+
+            // update previous item
+            TokenData = TokenData.map(item => {
+                if (item.id == updateItems) {
+                    return {
+                        ...activeItems,
+                        id: updateItems
+                    }
+                } else {
+                    return item;
+                }
+            })
+        }
     }
 
-    // const validform = fullForm.nameInput.trim() !== '' && fullForm.emailInput.trim() !== '';
-
-    // if (fullForm.nameInput == '' || fullForm.emailInput == '') {
-    //     document.querySelectorAll('.mantatory').forEach((items) => {
-    //         items.style.display = 'block';
-    //     })
-    // } else {
-    //     document.querySelectorAll('.mantatory').forEach((items) => {
-    //         items.style.display = 'none';
-    //     })
-    //     TokenData.push({
-    //         ...fullForm,
-    //         id: TokenData.length + 1
-    //     })
-    // }
-
     tokenHandler()
+    updateItems = '';
     document.getElementById('total-form').reset();
 })
 
@@ -115,6 +112,8 @@ function editHandler() {
                     document.querySelector(`[name="${i}"]`).value = edit[i];
                 }
             }
+
+            updateItems = dataId;
         }
     })
 }
